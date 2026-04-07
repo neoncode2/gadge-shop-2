@@ -1,42 +1,97 @@
+@import "tailwindcss";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --product-card-accent: #ff8b2a;
+  --product-card-accent-hover: #ef7e1e;
+  --product-card-accent-soft: #fff5ec;
+  --product-card-accent-soft-hover: #fff0df;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.product-card-accent-badge {
+  background: var(--product-card-accent);
+  color: #fff;
+}
+
+.product-card-accent-fill {
+  background: var(--product-card-accent);
+  color: #fff;
+}
+
+.product-card-accent-fill:hover {
+  background: var(--product-card-accent-hover);
+}
+
+.product-card-accent-outline {
+  border-color: var(--product-card-accent);
+  background: #fff;
+  color: var(--product-card-accent);
+}
+
+.product-card-accent-outline:hover {
+  background: var(--product-card-accent-soft);
+}
+
+.product-card-accent-text {
+  color: var(--product-card-accent);
+}
+
+.product-card-accent-soft {
+  background: var(--product-card-accent-soft);
+  color: var(--product-card-accent-hover);
+}
+
+.product-card-accent-hover:hover {
+  border-color: var(--product-card-accent);
+  background: var(--product-card-accent-soft-hover);
+}
+
+.product-card-accent-icon {
+  color: var(--product-card-accent);
+}
+
+.products-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .products-list-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.homepage-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (min-width: 40rem) {
+  .homepage-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.125rem;
   }
+}
+
+@media (min-width: 64rem) {
+  .homepage-product-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+.home-hero .swiper-pagination {
+  bottom: 14px !important;
+}
+
+.home-hero .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #d5d5d5;
+  opacity: 1;
+}
+
+.home-hero .swiper-pagination-bullet-active {
+  background: #f58a1f;
 }
