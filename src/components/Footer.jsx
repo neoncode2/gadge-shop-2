@@ -98,7 +98,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-black py-3.5 text-center text-[11px] text-white sm:text-[12px]">
-        Copyright &copy; 2025 gadgetbd.saleecom.shop
+        Copyright &copy; 2026 neoncode.co
       </div>
     </footer>
   );
