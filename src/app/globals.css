@@ -1,4 +1,5 @@
-@import "tailwindcss";
+/* Relative import avoids Turbopack resolving "tailwindcss" from C:\projects */
+@import "../../node_modules/tailwindcss/index.css";
 
 :root {
   --product-card-accent: #ff8b2a;
